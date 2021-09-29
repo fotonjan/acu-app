@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+    <h2 id="tagFirst-1">Jan Macoń</h2>
+<head>
+    
+    <title>ACU_KALKULATOR</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <style>
+        body{
+            background-color: rgb(186, 218, 221);
+            
+        }
+
+        .myDiv {
+            background-color: rgb(186, 198, 212);
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+        #imgFirst{
+            
+            height: 30;
+            width: 70%;
+            margin-top: 10px;
+            margin-left: 40px;
+            margin-bottom: -85px;  
+
+            border-radius:50%;          /* zmiana okrągłe */
+             opacity:0.4;               /* przezroczystość 0-1 */
+        }
+
+        input{
+            height: 30px;
+            font-size: 20px; 
+        }
+
+        #buttonClear {
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-bottom: 10px;
+        }
+        #buttonEnter {
+            margin-top: 50px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        #tagFirst-1 {
+            margin-top: 630px;
+            margin-left: 270px;
+            margin-bottom: px;
+            font-size: 9px;
+            color: rgba(46, 33, 65, 0.555);
+            font-weight: bolder;
+        }
+
+        #tagFirst {
+            margin-top: 5px;
+            margin-left: 40px;
+            margin-bottom: 70px;
+            font-size: 25px;
+            color: rgba(250, 2, 2, 0.712);
+            font-weight: bolder;
+        }
+        #tagSecond {
+            margin-top: px;
+            margin-left: 40px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            color: rgb(47, 0, 255);
+            font-weight: bolder;
+        }
+        #tagThird {
+            margin-top: 0px;
+            margin-left: 40px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            color: blue;
+            font-weight: bolder;
+        }
+        #tagFourth{
+            margin-top: px;
+            margin-left: 40px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            color: rgb(47, 0, 255);
+            font-weight: bolder;  
+        }
+        #tagFifth{
+            margin-top: px;
+            margin-left: 40px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            color: rgb(47, 0, 255);
+            font-weight: bolder;  
+        }
+        #variableFirst {
+            margin-top: 0px;
+            margin-left: 40px;
+            width: 35%;
+            margin-bottom: 10px;
+        }
+        #variableSecond {
+             margin-top: px;
+            margin-left: 40px;
+            width: 35%;
+            margin-bottom: 90px;
+
+        }
+        #variableThird {
+             margin-top: px;
+            margin-left: 40px;
+            width: 35%;
+            margin-bottom: 30px;
+
+        }
+        #variableFourth {
+             margin-top: px;
+            margin-left: 40px;
+            width: 35%;
+            margin-bottom: px;
+
+        }
+
+    </style>
+</head>
+   
+
+<body>
+    <div class="myDiv">
+        <div>
+            <img src="img_avatar4.png" alt="Avatar"id="imgFirst">  
+        
+        
+      </div>
+
+        <h2 id="tagFirst">ACU-CALKULATOR</h2>
+        
+
+        <form action="/action_page.php">
+
+
+            <div id="tagSecond">NAPIĘCIE ACU</div>
+            <input type="text" id="variableFirst" placeholder="Enter v" name="username">
+
+            <div id="tagThird">POJEMNOŚĆ ACU</div>
+            <input type="text" id="variableSecond" placeholder="Enter Ah" name="pwd">
+
+            <div id="tagFourth">  PRĄD POBIERANY</div>
+            <input type="text" id="variableThird" placeholder="Enter A" name="username">
+
+            <div id="tagFifth">CZAS PRACY W GODZ</div>
+            <input type="text" id="variableFourth" placeholder="czas pracy" name="username">
+
+
+
+        </form>
+
+        
+        <button id="buttonEnter" onclick="myFunction()">Enter</button>
+
+        
+        <button id="buttonClear" onclick="clearFields()">Clear</button>
+
+    </div>
+
+
+
+
+    <script>
+        function myFunction() {
+            let x = document.getElementById("variableFirst").value;
+            let y = document.getElementById("variableSecond").value;
+            let z = document.getElementById("variableThird").value;
+            let c = x * y;
+            let d = x * z;
+            let e = c / d;
+            let f = e / 1.6;
+
+
+
+            document.getElementById("variableFourth").value = f.toFixed(2);//funkcja 2miejsca po przecinku
+            // console.log(x);
+        }
+
+
+        function clearFields() {     //funkcja czyszczenia okien
+
+            document.getElementById("variableFirst").value = "";
+            document.getElementById("variableSecond").value = "";
+
+            document.getElementById("variableThird").value = "";
+            document.getElementById("variableFourth").value = "";
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
